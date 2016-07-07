@@ -7,7 +7,7 @@ Golang Ftp Client Library
 go get -u github.com/tsujimic/ftpclient-go
 ```
 
-## Sample
+## Using the ftpclient-go
 ```
 package main
 
