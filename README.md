@@ -1,6 +1,4 @@
 # ftpclient-go
-=====
-
 Golang Ftp Client Library
 
 ## Install ##
