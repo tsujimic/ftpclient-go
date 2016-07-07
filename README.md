@@ -18,7 +18,7 @@ import (
     "net"
     "strconv"
     "time"
-    "tsujimic/ftpclient"
+    "github.com/tsujimic/ftpclient-go"
 )
 
 func main() {
