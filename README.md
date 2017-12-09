@@ -34,8 +34,12 @@ func main() {
     flag.Parse()
 
     log.Println("Start")
-    addr := net.JoinHostPort(host, strconv.Itoa(port))
-    client, err := ftpclient.Connect(addr)
+
+	logger := NewDefaultLogger()
+	cfg := NewConfig().WithLogger(logger)
+	client := New(cfg)
+	addr := net.JoinHostPort(host, strconv.Itoa(port))
+	err := client.DialTimeout(addr, 30*time.Second)
     if err != nil {
         panic(err)
     }
