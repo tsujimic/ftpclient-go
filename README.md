@@ -35,11 +35,11 @@ func main() {
 
     log.Println("Start")
 
-	logger := NewDefaultLogger()
-	cfg := NewConfig().WithLogger(logger)
-	client := New(cfg)
-	addr := net.JoinHostPort(host, strconv.Itoa(port))
-	err := client.DialTimeout(addr, 30*time.Second)
+    logger := NewDefaultLogger()
+    cfg := NewConfig().WithLogger(logger)
+    client := New(cfg)
+    addr := net.JoinHostPort(host, strconv.Itoa(port))
+    err := client.DialTimeout(addr, 30*time.Second)
     if err != nil {
         panic(err)
     }
